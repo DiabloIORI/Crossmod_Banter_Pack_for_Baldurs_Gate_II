@@ -135,9 +135,7 @@ COPY - ~weidu.log~ ~weidu.log~ // use - so even if we do accidentally change som
   END ~%MATCH1%%MATCH2%~  
   REPLACE_EVALUATE CASE_INSENSITIVE "\(~.+amber\.tp2~ #\)\([0-9]+\)" BEGIN 
     PATCH_MATCH MATCH2 WITH
-      1 BEGIN SPRINT amber_lang ~german~ END
-      2 BEGIN SPRINT amber_lang ~spanish~ END
-      3 BEGIN SPRINT amber_lang ~schinese~ END
+      1 BEGIN SPRINT amber_lang ~schinese~ END
       DEFAULT 
     END  
   END ~%MATCH1%%MATCH2%~    
@@ -190,6 +188,7 @@ COPY - ~weidu.log~ ~weidu.log~ // use - so even if we do accidentally change som
       1 BEGIN SPRINT solaufein_lang ~english~ END
       2 BEGIN SPRINT solaufein_lang ~russian~ END
       3 BEGIN SPRINT solaufein_lang ~italian~ END
+	  4 BEGIN SPRINT solaufein_lang ~schinese~ END
       DEFAULT 
     END  
   END ~%MATCH1%%MATCH2%~     
